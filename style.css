@@ -1,0 +1,91 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 36px;
+}
+
+header h2 {
+	margin: 0;
+	font-size: 24px;
+}
+
+section {
+	padding: 20px;
+}
+
+section h3 {
+	margin-top: 0;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	margin-bottom: 10px;
+}
+
+ul li h4 {
+	margin-top: 0;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+#about {
+	background-color: #f2f2f2;
+}
+
+#skills {
+	background-color: #e6e6e6;
+}
+
+#experience {
+	background-color: #d9d9d9;
+}
+
+#education {
+	background-color: #cccccc;
+}
+JavaScript CODE:
+
+// Add smooth scrolling to all links
+$("a").on('click', function(event) {
+
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 800, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  } // End if
+});
